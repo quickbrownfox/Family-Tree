@@ -1,0 +1,21 @@
+<h1>Listing men</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @men.each do |man| %>
+  <tr>
+    <td><%= link_to 'Show', man %></td>
+    <td><%= link_to 'Edit', edit_man_path(man) %></td>
+    <td><%= link_to 'Destroy', man, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Man', new_man_path %>

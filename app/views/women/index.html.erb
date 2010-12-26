@@ -1,0 +1,21 @@
+<h1>Listing women</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @women.each do |woman| %>
+  <tr>
+    <td><%= link_to 'Show', woman %></td>
+    <td><%= link_to 'Edit', edit_woman_path(woman) %></td>
+    <td><%= link_to 'Destroy', woman, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Woman', new_woman_path %>
