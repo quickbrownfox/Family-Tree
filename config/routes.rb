@@ -1,6 +1,4 @@
 Familytree::Application.routes.draw do
-  resources :women
-
   resources :men
 
   # The priority is based upon order of creation:

@@ -1,0 +1,18 @@
+= form_for @man do |f|
+  - if @man.errors.any? 
+    %div{:id=>"error_explanation"}
+      %h2
+        = pluralize(@man.errors.count, "error")
+        prohibited this man from being saved:
+      %ul
+      = @man.errors.full_messages.each do |msg|
+        %li
+          = msg
+
+  %div.actions
+    = f.label "First name"
+    = f.text_field :first_name
+    = f.label "Last name"
+    = f.text_field :last_name
+    = f.select(:mother_id,"select" )
+    = f.submit

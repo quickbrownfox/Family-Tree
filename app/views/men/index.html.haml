@@ -1,0 +1,20 @@
+%h1 Listing men
+
+%table
+  %tr
+    %td First Name
+    %td Last Name
+    %th
+
+
+- @men.each do |man|
+  %tr
+    %td= man.first_name
+    %td= man.last_name
+    %td= link_to 'Show', man
+    %td= link_to 'Edit', edit_man_path(man)
+    %td= link_to 'Destroy', man, :confirm => 'Are you sure?', :method => :delete 
+
+%br
+
+= link_to 'New Man', new_man_path
