@@ -1,5 +1,6 @@
 class Man < ActiveRecord::Base
-#  belongs_to :Man, :foreign_key => :father_id
+  has_one :father, :class_name => 'Man'
   validates :first_name, :presence => true
   validates :last_name, :presence => true
+  has_many :children, :class_name => "Man"
 end

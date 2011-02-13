@@ -12,7 +12,14 @@
   %div.actions
     = f.label "First name"
     = f.text_field :first_name
+    %br
     = f.label "Last name"
     = f.text_field :last_name
-    = f.select(:mother_id,"select" )
+    %br
+    = f.label "Birth date"
+    = f.date_select :birth_date
+    %br
+    = f.label "Father"
+    = f.select :father, [1,2,3,4,5,6,7,8,9,0,10]
+    %br
     = f.submit
